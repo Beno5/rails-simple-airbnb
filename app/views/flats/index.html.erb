@@ -1,0 +1,18 @@
+<h1>All our Flats(<%= @number_of_flats %>)</h1>
+
+<div class="cards d-flex justify-content-around align-items-center" >
+  <% @flats.each do |flat| %>
+  
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= flat.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+    <p class="card-text"><%= flat.description %></p>
+    
+  </div>
+  
+  <% end %>
+</div>
+<%= link_to "Create", new_flat_path  %>
+
+
